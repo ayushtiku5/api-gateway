@@ -1,0 +1,6 @@
+2026/06/27 18:02:52 [GATEWAY] starting on :8080 (default_action=deny, 6 policies, 3 services)
+2026/06/27 18:03:00 [GATEWAY] ALLOW order-service -> user-service GET /users/1 200 (7ms)
+2026/06/27 18:03:00 [GATEWAY] ALLOW order-service -> inventory-service PUT /inventory/prod-1/reserve 200 (2ms)
+2026/06/27 18:03:20 [GATEWAY] DENY  user-service -> inventory-service GET /inventory/prod-1
+2026/06/27 18:03:20 [GATEWAY] DENY  inventory-service -> user-service GET /users/1
+2026/06/27 18:03:20 [GATEWAY] DENY  unknown-service -> user-service GET /users/1

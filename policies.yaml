@@ -1,0 +1,26 @@
+services:
+  user-service:       "http://localhost:8081"
+  order-service:      "http://localhost:8082"
+  inventory-service:  "http://localhost:8083"
+
+default_action: deny
+
+policies:
+  - source: order-service
+    target: user-service
+    action: allow
+  - source: order-service
+    target: inventory-service
+    action: allow
+  - source: user-service
+    target: order-service
+    action: allow
+  - source: user-service
+    target: inventory-service
+    action: deny
+  - source: inventory-service
+    target: user-service
+    action: deny
+  - source: inventory-service
+    target: order-service
+    action: deny
