@@ -1,0 +1,11 @@
+# Binaries
+.build/
+
+# Logs
+logs/
+
+# Runtime
+.pids
+
+# Local Claude settings
+.claude/settings.local.json
